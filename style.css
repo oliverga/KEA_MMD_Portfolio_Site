@@ -16,7 +16,6 @@
     src: url("fonts/TINY5x3-60.woff2");
     font-weight: 60;
 }
-
 @font-face {
     font-family: "tiny";
     src: url("fonts/TINY5x3-80.woff2");
@@ -80,25 +79,18 @@
 }
 
 :root {
-    --bg: #1A1A1A;
-    /* --bg: #000000; */
+    /* --bg: #1A1A1A; */
+    --bg: #070707;
     --text1 : #eeeeee;
-    --text2: #EEE0CB;
-    --accent1: #E56399;
-    --accent2: #71A2B6;
-    --accent3: #7A6563;
-    --accent4: #F3DE8A;
-    --accent5: #454372;
-    --shadow: 0 0 0px 0 rgba(0, 0, 0, 0.5);
+    --glow: 0 0 2rem 0 rgba(255, 255, 255, 0.059);
     --border: 1px solid #eeeeee61;
-
   }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
    
 body {
     line-height: 1.6;
@@ -115,7 +107,8 @@ body::before {
     bottom: 0px;
     left: 0px;
     background-image: url(grain.png);
-    opacity: 10%;
+    opacity: 100%;
+    pointer-events: none;
 }
 
 img {
@@ -124,7 +117,27 @@ img {
     display: block;
 }
 
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: 4rem;
+    height: 8vh;
+    /* padding-left: 1rem; */
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+}
+
+
 header h1 {
+    font-size: 2rem;
+    font-weight: 40;
+    font-family: "tiny";
+    margin-left: 2rem;
+}
+
+header h2 {
     font-size: 2rem;
     font-weight: 40;
     font-family: "tiny";
@@ -136,36 +149,35 @@ a {
     color: var(--text1);
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 10vh;
-    /* max-width: 1200px;
-    margin-inline: auto; */
-    /* padding-left: 1rem; */
-    white-space: nowrap;
-    overflow: hidden;
-}
-
 main {
     display: flex;
     flex-direction: column;
     justify-content: start;
     max-width: 1200px;
     margin-inline: auto;
+}
 
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+footer p {
+    font-size: 1.6rem;
+    font-weight: 40;
+    margin-right: 1rem;
+    margin-bottom: 0.4rem;
 }
 
 .marquee_wrap {
     white-space: nowrap;
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr 2.8fr 1fr 1.8fr 1fr 1fr;
-    gap: 10px;
+    grid-template-rows: 1fr 2fr 1fr 2.7fr 1fr 2fr 1fr 1fr;
+    gap: 0.7rem;
     height: 85vh;
-    box-shadow: var(--shadow);
-    z-index: 100000;
     margin-top: 0.5rem;
+    margin-inline: 0.7rem;
   }
 
 .marquee_ticker {
@@ -175,36 +187,39 @@ main {
     width: 100%;
     border-block: var(--border);
     border-inline: var(--border);
-    border-radius: 10px;
-    
+    border-radius: 7px;
+    transition: all 0.1s ease-in-out;
+    background-image: url(scanlines3.png);
+    background-size: 20%;
 }
-
-
 
 .marquee_ticker span {
     display: inline-block;
     font-size: 3rem;
-    font-weight: 180;
+    font-weight: 20;
     animation: linear infinite;
     margin-right: 0.07%;
-    opacity: 20%;
-    filter: blur(1px);
+    opacity: 40%;
+    filter: drop-shadow(0 0 0rem);
     transition: all 0.1s ease-in-out;
-
-
 }
 
 .marquee_ticker:hover span {
     opacity: 100%;
     animation-play-state: paused;
-    font-weight: 60;
-    filter: blur(0px);
+    font-weight: 140;
+    filter: drop-shadow(0 0 2rem rgba(255, 255, 255, 0.246));
+
+}
+
+.marquee_ticker:hover {
+    box-shadow: var(--glow);
 }
 
 .ticker_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px
+    column-gap: 0.7rem;
 }
 
 .ticker_1 {
@@ -218,14 +233,17 @@ main {
 }
 
 .ticker_2 {
-    box-shadow: var(--shadow);
-    z-index: 100000;
+
 }
 
 .ticker_2 span {
     animation-duration: 40s;
     animation-name: marquee_2;
     font-size: 7rem;
+}
+
+.ticker_2:hover span {
+    font-weight: 120;
 }
 
 .ticker_3 {
@@ -247,14 +265,17 @@ main {
 }
 
 .ticker_5 {
-    box-shadow: var(--shadow);
-    z-index: 100000;
+
 }
 
 .ticker_5 span {
     animation-duration: 65s;
     animation-name: marquee_1;
-    font-size: 10rem;
+    font-size: 9rem;
+}
+
+.ticker_5:hover span {
+    font-weight: 120;
 }
 
 .ticker_6 {
@@ -266,14 +287,17 @@ main {
 }
 
 .ticker_7 {
-    box-shadow: var(--shadow);
-    z-index: 100000;
+
 }
 
 .ticker_7 span {
     animation-duration: 60s;
     animation-name: marquee_2;
     font-size: 6rem;
+}
+
+.ticker_7:hover span {
+    font-weight: 120;
 }
 
 .ticker_8 {
@@ -285,7 +309,7 @@ main {
 }
 
 .ticker_9 {
-    box-shadow: var(--shadow);
+
     z-index: 100000;
 }
 
@@ -293,10 +317,6 @@ main {
     animation-duration: 50s;
     animation-name: marquee_2;
 }
-
-/* .marquee_ticker span:hover {
-    animation-play-state: paused;
-} */
 
 @keyframes marquee_1 {
     0% {
