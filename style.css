@@ -86,7 +86,7 @@
     --text1 : #eeeeee;
     --glow: 0 0 4rem 0 rgba(255, 255, 255, 0.1);
     --border: 1px solid #eeeeee61;
-    --border2: 1px dashed #eeeeee61;
+    --border2: 1px dashed grey;
   }
 
 
@@ -154,7 +154,7 @@ body::before {
 }
 
 .studiestartsproeve_body::before {
-    height: 150%;
+    height: 170%;
     z-index: -1;
 }
 
@@ -188,7 +188,7 @@ header h2 {
     font-size: 2rem;
     font-weight: 40;
     font-family: "tiny";
-    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 main {
@@ -244,7 +244,8 @@ a {
     /* margin-left: 2rem;
     margin-right: 2rem;
     margin-bottom: 1rem; */
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
+    margin-inline: 3rem;
 }
 
 br {
@@ -268,8 +269,8 @@ br {
     margin-block: 4rem;
     border: var(--border);
     border-radius: 7px;
-    filter: drop-shadow(var(--glow));
-    z-index: 9999999;
+    filter: drop-shadow(0px 0px 1.5rem rgba(255, 255, 255, 0.143));
+
 }
 
 /* HOME */
@@ -523,6 +524,8 @@ br {
     margin-right: 0.7rem;
 }
 
+/* PAGE CLICKERS */
+
 .next_page {
     display: flex;
     flex-direction: row;
@@ -537,7 +540,7 @@ br {
     align-self: center;
     border-top: var(--border2);
     height: 0;
-    width: 80px;
+    width: 5rem;
 }
 
 .next_page_link {
@@ -565,7 +568,7 @@ br {
     align-self: center;
     border-top: var(--border2);
     height: 0;
-    width: 80px;
+    width: 5rem;
 }
 
 .previous_page_link {
@@ -577,4 +580,15 @@ br {
     margin-inline: auto;
     margin-inline: 0.15rem;
     transform: translateY(-7.4px);
+}
+
+
+@media screen and (max-width: 800px) {
+    .next_page {
+        display: none;
+    }
+    .previous_page {
+        display: none;
+    }
+    
 }
