@@ -233,13 +233,14 @@ a {
 .side_tekst {
     max-width: 800px;
     margin-inline: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .side_tekst p {
     font-family: 'Cousine';
     font-size: 0.9rem;
-    font-weight: 200;
-    opacity: 80%;
+    font-weight: 100;
     /* margin-left: 2rem;
     margin-right: 2rem;
     margin-bottom: 1rem; */
@@ -251,13 +252,14 @@ br {
 }
 
 .side_tekst a {
-    opacity: 80%;
     font-family: 'Cousine';
     font-size: 0.9rem;
     font-weight: 200;
     text-decoration: underline dashed grey;
-    border: 1px solid grey;
+
+    text-align: center;
 }
+
 
 .side_tekst img {
     width: 100%;
@@ -553,7 +555,6 @@ br {
     font-size: 0.7rem;
     font-weight: 100;
     text-decoration: 1px underline dashed grey;
-    opacity: 80%;
     width: fit-content;
     margin-inline: auto;
     margin-inline: 0.15rem;
@@ -582,7 +583,6 @@ br {
     font-size: 0.7rem;
     font-weight: 100;
     text-decoration: 1px underline dashed grey;
-    opacity: 80%;
     width: fit-content;
     margin-inline: auto;
     margin-inline: 0.15rem;
