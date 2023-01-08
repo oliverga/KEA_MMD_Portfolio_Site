@@ -357,23 +357,13 @@ br {
     font-weight: 100;
 }
 
-.ticker_3 {
-    grid-column: 1/2;
-}
-
-.ticker_3 span {
-    animation-duration: 25s;
-    animation-name: marquee_1;
-    
-}
-
 .ticker_4 {
-    grid-column: 2/3;
+
 }
 
 .ticker_4 span {
     animation-duration: 25s;
-    animation-name: marquee_2;
+    animation-name: marquee_1;
 }
 
 .ticker_5 {
@@ -382,7 +372,7 @@ br {
 
 .ticker_5 span {
     animation-duration: 65s;
-    animation-name: marquee_1;
+    animation-name: marquee_2;
     font-size: 11vh;
 }
 
@@ -395,7 +385,7 @@ br {
 
 .ticker_6 span {
     animation-duration: 50s;
-    animation-name: marquee_2;
+    animation-name: marquee_1;
 }
 
 .ticker_7 {
