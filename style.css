@@ -1,9 +1,7 @@
 /* FONTS */
 
-/* import google font */
 @import url('https://fonts.googleapis.com/css2?family=Cousine:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900');
-
 
 @font-face {
     font-family: "tiny";
@@ -86,19 +84,6 @@
 
 
 
-:root {
-    /* --bg: #1A1A1A; */
-    --bg: #222222;
-    --text1 : #e2e2e2;
-    --glow: 0 0 4rem 0 rgba(255, 255, 255, 0.1);
-    --border: 1px solid #eeeeee61;
-    --border2: 1px dashed grey;
-  }
-
-
-
-
-
 /* FADER */
 
 #fader {
@@ -142,6 +127,15 @@
 
 /* GLOBAL */
 
+:root {
+    /* --bg: #1A1A1A; */
+    --bg: #222222;
+    --text1 : #e2e2e2;
+    --glow: 0 0 4rem 0 rgba(255, 255, 255, 0.1);
+    --border: 1px solid #eeeeee61;
+    --border2: 1px dashed grey;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -162,10 +156,14 @@ body::before {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-image: url(grain.webp);
+    background-image: url(imgs/grain.webp);
     opacity: 60%;
     pointer-events: none;
     z-index: -1;
+}
+
+.background::before {
+    z-index: inherit;
 }
 
 img {
@@ -176,12 +174,7 @@ img {
 
 header {
     display: flex;
-    /* flex-direction: row;
-    align-items: center;
-    justify-content: space-between; */
-    margin-inline: 4rem;
     height: 8vh;
-
     flex-direction: column;
     align-items: center;
     justify-items: center;
@@ -191,22 +184,16 @@ header {
 
 
 header h1 {
-    /* font-size: 2rem; */
     font-weight: 40;
     font-family: "tiny";
-    /* margin-left: 2rem; */
-
     margin-left: 0rem;
     margin-bottom: -1.2rem;
     font-size: 1.6rem;
 }
 
 header h2 {
-    /* font-size: 2rem; */
     font-weight: 40;
     font-family: "tiny";
-    /* margin-right: 2rem; */
-
     margin-right: 0rem;
     font-size: 1.6rem;
 }
@@ -215,11 +202,12 @@ header h2 {
 header a {
     padding: 0.75rem;
     filter: drop-shadow(0px 0px 1rem rgba(255, 255, 255, 0));
-    transition: all 0.2s ease-in-out;
+    transition: all 0.15s ease-in-out;
 }
 
 header a:hover {
-    filter: drop-shadow(0px 0px 1rem rgba(255, 255, 255, 0.526))
+    filter: drop-shadow(0px 0px 1rem rgba(255, 255, 255, 0.526));
+    font-weight: 80;
 }
 
 main {
@@ -248,18 +236,21 @@ footer p {
 main h1 {
     margin-inline: auto;
     /* font-size: 5rem; */
-    font-weight: 60;
+    font-weight: 40;
     font-family: "tiny";
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     white-space: wrap;
     text-align: center;
     line-height: 1;
-    /* filter: drop-shadow(0px 0px 1.5rem rgba(255, 255, 255, 0.500)); */
-
-
     font-size: 3rem;
     margin-top: 1rem;
+    transition: font-weight 0.15s ease-in-out;
+    padding: 1rem;
+}
 
+main h1:hover {
+    font-weight: 100;
+    filter: drop-shadow(0px 0px 1rem rgba(255, 255, 255, 0.265))
 }
 
 a {
@@ -326,21 +317,39 @@ br {
     margin-top: 3rem;
     border: 1px solid #eeeeee00;
     border-radius: 7px;
-    filter: drop-shadow(0px 0px 1rem rgba(255, 255, 255, 0));
-    transition: all 0.2s ease-in-out;
+    filter: drop-shadow(0px 0px 0rem rgba(255, 255, 255, 0));
+    transition: all 0.3s ease-in-out, transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    border: 1px solid #eeeeee1b;
 
 }
 
 .side_tekst img:hover {
-    filter: drop-shadow(0px 0px 1rem rgba(255, 255, 255, 0.250));
-    border: var(--border);
+    filter: drop-shadow(0px 0.4rem 1rem rgba(0, 0, 0, 0.534));
+    border: 1px solid #9999997c;
+    transform: scale(101%);
 }
 
 .side_tekst embed {
     margin-bottom: 4rem;
 }
 
+.side_tekst li {
+    font-family: 'Inter';
+    font-size: 0.9rem;
+    font-weight: 300;
+}
 
+.side_tekst ul {
+    font-family: 'Inter';
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: 2rem;
+    list-style-type: kannada;
+}
+
+a.a_2 {
+    margin-top: 0rem;
+}
 
 
 
@@ -351,12 +360,11 @@ br {
     white-space: nowrap;
     display: grid;
     grid-template-rows: 1fr 2fr 1fr 2.7fr 1fr 1.7fr 1fr 1fr;
-    grid-template-columns: 1fr 8fr 1fr;
     gap: 0.7rem;
     height: 85vh;
     margin-top: 0.5rem;
     margin-inline: 0.7rem;
-  }
+}
 
 .marquee_ticker {
     display: flex;
@@ -367,21 +375,23 @@ br {
     border-inline: var(--border);
     border-radius: 7px;
     transition: all 0.15s ease-in-out;
-    background-image: url(scanlines.webp);
+    background-image: url(imgs/scanlines.webp);
     background-size: 20%;
     grid-column: 2/3;
+    box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0);
 }
 
 .marquee_ticker span {
     display: inline-block;
     font-size: 4vh;
-    font-weight: 20;
+    font-weight: 40;
     animation: linear infinite;
     margin-right: 0.07%;
     opacity: 40%;
-    filter: drop-shadow(0 0 0rem);
+    filter: drop-shadow(0 0 2rem rgba(255, 255, 255, 0));
     transition: all 0.15s ease-in-out;
     color: #eeeeee;
+    user-select: none;
 }
 
 .marquee_ticker:hover span {
@@ -392,7 +402,8 @@ br {
 }
 
 .marquee_ticker:hover {
-    box-shadow: var(--glow);
+    box-shadow: 0 0 3rem 0 rgba(255, 255, 255, 0.1);
+    border-color: rgb(226, 226, 226);
 }
 
 
@@ -480,9 +491,11 @@ br {
 
 .tema_text {
     border-radius: 7px;
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-between;
+    pointer-events: none;
+    user-select: none;
 }
 
 .tema_text p {
@@ -724,26 +737,48 @@ br {
         height: 8vh;
     }
     
-    
     header h1 {
         font-size: 2rem;
         font-weight: 40;
         font-family: "tiny";
-        margin-left: 2rem;
+        margin-left: 0rem;
         margin-bottom: 0rem;
-
     }
     
     header h2 {
         font-size: 2rem;
         font-weight: 40;
         font-family: "tiny";
-        margin-right: 2rem;
+        margin-right: 0rem;
     }
 
     main h1 {
         margin-top: 0rem;
         font-size: 5rem;
     }
+
+    .marquee_wrap {
+        white-space: nowrap;
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr 2.7fr 1fr 1.7fr 1fr 1fr;
+        grid-template-columns: 1fr 8fr 1fr;
+        gap: 0.7rem;
+        height: 85vh;
+        margin-top: 0.5rem;
+        margin-inline: 0.7rem;
+    }
+
+    .tema_text {
+        border-radius: 7px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .marquee_ticker span {
+    font-weight: 20;
+    margin-right: 0.07%;
+    transition: all 0.15s ease-in-out;
+}
 
 }
