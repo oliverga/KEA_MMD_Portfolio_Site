@@ -420,30 +420,15 @@ a.a_2 {
     border-top: var(--border);
 }
 
-.ticker_1:hover {
-    border-color: rgba(151, 103, 255, 0.861);
-    box-shadow: 0 0 3rem 0 rgba(151, 103, 255, 0.259);
-}
-
 .ticker_1 span {
     animation-duration: 35s;
     animation-name: marquee_1;
-}
-
-.ticker_2:hover {
-    border-color: rgba(246, 255, 153, 0.861);
-    box-shadow: 0 0 3rem 0 rgba(247, 255, 153, 0.259);
 }
 
 .ticker_2 span {
     animation-duration: 40s;
     animation-name: marquee_2;
     font-size: 9vh;
-}
-
-.ticker_4:hover {
-    border-color: rgba(255, 199, 86, 0.861);
-    box-shadow: 0 0 3rem 0 rgba(255, 199, 86, 0.259);
 }
 
 .ticker_4 span {
@@ -457,31 +442,15 @@ a.a_2 {
     font-size: 11vh;
 }
 
-.ticker_5:hover {
-    border-color: rgba(136, 250, 119, 0.861);
-    box-shadow: 0 0 3rem 0 rgba(136, 250, 119, 0.231);
-}
-
 .ticker_6 span {
     animation-duration: 50s;
     animation-name: marquee_1;
-}
-
-.ticker_6:hover {
-    border-color: rgba(126, 130, 255, 0.665);
-    box-shadow: 0 0 3rem 0 rgba(126, 130, 255, 0.249);
 }
 
 .ticker_7 span {
     animation-duration: 50s;
     animation-name: marquee_2;
     font-size: 7vh;
-}
-
-.ticker_7:hover {
-    border-color: rgba(255, 126, 227, 0.712);
-    box-shadow: 0 0 3rem 0 rgba(255, 126, 227, 0.251);
-
 }
 
 .ticker_8 span {
