@@ -240,8 +240,7 @@ main h1 {
     /* font-size: 5rem; */
     font-weight: 40;
     font-family: "tiny";
-    margin-bottom: 2rem;
-    white-space: wrap;
+    margin-bottom: 2rem;;
     text-align: center;
     line-height: 1;
     font-size: 3rem;
@@ -325,7 +324,7 @@ br {
 .side_tekst img:hover {
     filter: drop-shadow(0px 0.4rem 1rem rgba(0, 0, 0, 0.534));
     border: 1px solid #9999997c;
-    transform: scale(101%);
+    transform: scale(1.02);
 }
 
 .side_tekst video {
