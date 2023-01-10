@@ -336,20 +336,6 @@ br {
     align-self: center;
 }
 
-.side_tekst ul {
-    font-family: 'Inter';
-    font-size: 0.9rem;
-    font-weight: 300;
-    list-style-type: kannada;
-    align-self: center;
-}
-
-.side_tekst li {
-    font-family: 'Inter';
-    font-size: 0.9rem;
-    font-weight: 300;
-}
-
 a.a_2 {
     margin-top: 0rem;
 }
@@ -611,7 +597,7 @@ a.a_2 {
     font-weight: 100;
     text-decoration: 1px underline dashed grey;
     width: fit-content;
-    transform: translateY(-7px);
+    transform: translateY(-6px);
     transition: all 0.2s ease-in-out;
     padding: 1rem 0rem 1rem 1rem;
     filter: drop-shadow(0px 0px 1rem rgba(128, 128, 128, 0));
@@ -656,7 +642,7 @@ a.a_2 {
     font-weight: 100;
     text-decoration: 1px underline dashed grey;
     width: fit-content;
-    transform: translateY(-7px);
+    transform: translateY(-6px);
     transition: all 0.2s ease-in-out;
     order: 2;
     padding: 1rem 1rem 1rem 0rem;
@@ -679,16 +665,14 @@ a.a_2 {
 
 /* ABOUT PAGE */
 
-#about_tekst {
-    max-width: 800px;
-}
+
 
 .about_div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
     width: 100%;
 }
 
@@ -697,8 +681,8 @@ a.a_2 {
     font-size: 0.9rem;
     font-weight: 300;
     text-align: justify;
-    margin-top: 4rem;
-    margin-bottom: 0rem;
+    align-self: center;
+    width: 80%;
 }
 
 .about_div img {
@@ -706,30 +690,44 @@ a.a_2 {
     border-radius: 7px;
     margin-top: 0rem;
     margin-bottom: 3rem;
+    width: 32%;
+    place-self: center;
 }
 
 .about_div2 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 3rem;
-    width: 100%;
-    margin-inline: auto;
-}
-
-.about_div2 div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-top: 0rem;
+    margin-inline: 5rem;
     align-items: center;
-    width: 50%;
-    align-self: center;
-    margin-bottom: 3rem;
-    white-space: nowrap;
 }
 
+.about_div2_section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2rem;
+}
 
+.about_div2_section p {
+    font-family: 'tiny';
+    font-weight: 60;
+    font-size: 1.6rem;
+    margin-inline: 0rem;
+    margin-right: 2rem;
+    place-self: start;
+}
+
+.side_tekst li {
+    font-family: 'Inter';
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+.side_tekst ul {
+    margin-bottom: 1rem;
+}
 
 
 
@@ -839,40 +837,48 @@ a.a_2 {
 
     .about_div {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: flex-start;
-        margin-top: 2rem;
+        margin-top: 0rem;
         margin-bottom: 2rem;
-        width: 110%;
+        width: 100%;
     }
 
 
     .about_div img {
-        width: 80%;
+        width: 25%;
+        place-self: center;
         height: auto;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin-top: 0rem;
         margin-inline: 0rem;
     }
 
     .about_div2 {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        margin-top: 3rem;
-        width: 105%;
         margin-inline: auto;
+        align-items: start;
+        justify-content: space-between;
+        width: 70%;
     }
     
-    .about_div2 div {
-        display: flex;
+    .about_div2_section {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        margin-bottom: 3rem;
-        white-space: nowrap;
+        justify-content: space-between;
+        margin-bottom: 7rem;
+        margin-top: 0rem;
+    }
+
+    .about_div2_section p {
+        margin-top: 0rem;
+        margin-inline: 0rem;
+        place-self: start;
+        margin-right: 0rem;
+        transform: translateX(-2rem);
+    }
+
+    .side_tekst ul {
+        margin-bottom: 0rem;
     }
     
 }
