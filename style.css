@@ -325,6 +325,14 @@ br {
     transform: scale(101%);
 }
 
+.side_tekst video {
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    border-radius: 7px;
+    width: 90%;
+    align-self: center;
+}
+
 .side_tekst ul {
     font-family: 'Inter';
     font-size: 0.9rem;
@@ -697,7 +705,7 @@ a.a_2 {
 
 .about_div2 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     margin-top: 3rem;
@@ -711,6 +719,9 @@ a.a_2 {
     justify-content: center;
     align-items: center;
     width: 50%;
+    align-self: center;
+    margin-bottom: 3rem;
+    white-space: nowrap;
 }
 
 
@@ -827,14 +838,36 @@ a.a_2 {
         align-items: flex-start;
         margin-top: 2rem;
         margin-bottom: 2rem;
+        width: 110%;
     }
 
 
     .about_div img {
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: auto;
         margin-top: 1rem;
         margin-bottom: 1rem;
         margin-inline: 0rem;
     }
+
+    .about_div2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 3rem;
+        width: 105%;
+        margin-inline: auto;
+    }
+    
+    .about_div2 div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin-bottom: 3rem;
+        white-space: nowrap;
+    }
+    
 }
